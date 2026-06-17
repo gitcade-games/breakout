@@ -4,7 +4,10 @@
     "width": 800,
     "height": 600
   },
-  "background": "#0b0b16",
+  "background": {
+    "color": "#0b0b16",
+    "layers": [{ "src": "assets/backgrounds/starfield.png", "scrollX": 0, "scrollY": 0 }]
+  },
   "entities": [
     {
       "id": "paddle",
@@ -1055,7 +1058,7 @@
         "h": 24
       },
       "position": {
-        "x": 12,
+        "x": 60,
         "y": 10
       },
       "tags": [
@@ -1077,7 +1080,7 @@
         "h": 24
       },
       "position": {
-        "x": 320,
+        "x": 400,
         "y": 10
       },
       "tags": [
@@ -1226,6 +1229,19 @@
     {
       "type": "persistence",
       "params": {}
+    },
+    {
+      "type": "explosion",
+      "params": {
+        "event": "block-broken",
+        "colors": [
+          "#b13e53",
+          "#ef7d57",
+          "#ffcd75",
+          "#a7f070",
+          "#41a6f6"
+        ]
+      }
     }
   ],
   "flow": {
